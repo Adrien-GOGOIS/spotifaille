@@ -1,4 +1,4 @@
-export type Favorites = 
+export type FavoriteTrack = 
 	{
 		added_at: string;
 		track: {
