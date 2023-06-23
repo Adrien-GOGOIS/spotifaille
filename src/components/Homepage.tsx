@@ -19,16 +19,15 @@ const Homepage: FunctionComponent  = () => {
 
 	return (
 		<div>
-		<div >
 			{ !isLoggedIn &&
-			<button
-			onClick={() => window.open(authentificationServiceInstance.getAuthorizeHref(), '_self')}
-			className='btn border-2 p-2'
-			>
-			Connectez-vous à Spotify
-			</button> }
+				<button
+					onClick={() => window.open(authentificationServiceInstance.getAuthorizeHref(), '_self')}
+					className='btn border-2 p-2'
+				>
+					Connectez-vous à Spotify
+				</button> 
+			}
 			{ isLoggedIn && <Favorites/> }
-		</div>
 		</div>
 	);
 }
