@@ -25,8 +25,12 @@ const FavoriteActionButton: FunctionComponent<Props> = ({isActive, setIsActive, 
 			isActive 
 			? () => removeFavorite(favorite.track.id) 
 			: () => saveTrack(favorite.track.id)
-		} className="btn m-2 absolute bottom-0 left-0 border-2 p-2"
-		>{isActive ? 'Retirer des favoris' : 'Enregistrer dans les favoris'}</button>	
+		} 
+		className={
+			isActive ? "btn m-2 absolute bottom-0 left-0 border-2 p-2 bg-red-500 border-red-900"
+			: "btn m-2 absolute bottom-0 left-0 border-2 p-2 bg-green-500 border-green-900"
+		}
+		>{ isActive ? 'Retirer des favoris' : 'Enregistrer dans les favoris' }</button>	
 	)
 }
 
