@@ -1,4 +1,4 @@
-import { FunctionComponent, useState } from "react";
+import { FunctionComponent, useEffect, useState } from "react";
 import { FavoriteTrack } from "../types/types";
 import FavoriteCard from "./FavoriteCard";
 
@@ -24,7 +24,7 @@ const Favorites: FunctionComponent<Props> = ({accessToken}: Props) => {
 			<button onClick={getData}>clique</button>
 			{data.length > 0 && data.map((favorite) => {
 				return (
-					<FavoriteCard key={favorite.track.name} favorite={favorite}/>
+					<FavoriteCard key={favorite.track.name} favorite={favorite} />
 				)
 			})}
 		</>
