@@ -22,10 +22,10 @@ const Favorites: FunctionComponent<Props> = ({accessToken}: Props) => {
 	return (
 		<>
 			<button onClick={getData}>clique</button>
-			<div className="flex">
+			<div className="flex gap-5">
 			{data.length > 0 && data.map((favorite) => {
 				return (
-						<FavoriteCard key={favorite.track.name} favorite={favorite} />
+					<FavoriteCard key={favorite.track.name} favorite={favorite} />
 				)
 			})}
 			</div>

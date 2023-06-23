@@ -12,6 +12,10 @@ const FavoriteCard: FunctionComponent<Props> = ({favorite}: Props) => {
 		favoriteServiceInstance.removeFavorite(favoriteId);
 	}
 
+	const saveTrack = async (favoriteId: string) => {
+		favoriteServiceInstance.saveFavorite(favoriteId);
+	}
+
 	return (
 		<div className="w-1/2 max-w-sm rounded overflow-hidden shadow-lg">
 			<img className="w-full" src={favorite.track.album.images[0].url} alt="Sunset in the mountains"/>
@@ -21,7 +25,8 @@ const FavoriteCard: FunctionComponent<Props> = ({favorite}: Props) => {
 				<p className="text-gray-700 text-base">{favorite.track.name}</p>
 			</div>
 			<div className="px-6 pt-4 pb-2">
-				<button onClick={() => removeFavorite(favorite.track.id)} className="btn">Remove</button>
+				<button onClick={() => removeFavorite(favorite.track.id)} className="btn m-2">Remove</button>
+				<button onClick={() => saveTrack(favorite.track.id)} className="btn">Save</button>
 			</div>
 		</div>
 	)

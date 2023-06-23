@@ -5,12 +5,21 @@ export class FavoriteService {
 	public accessToken = this.hashParams.access_token;
 
  	public removeFavorite = async (favoriteId: string) => {
-	await fetch(`https://api.spotify.com/v1/me/tracks?ids=${favoriteId}`, {
-			method: 'DELETE',
-			headers: {
-				"Authorization": "Bearer  " + this.accessToken
-			}
-		});
+		await fetch(`https://api.spotify.com/v1/me/tracks?ids=${favoriteId}`, {
+				method: 'DELETE',
+				headers: {
+					"Authorization": "Bearer  " + this.accessToken
+				}
+			});
+	}
+
+	public saveFavorite = async (favoriteId: string) => {
+		await fetch(`https://api.spotify.com/v1/me/tracks?ids=${favoriteId}`, {
+				method: 'PUT',
+				headers: {
+					"Authorization": "Bearer  " + this.accessToken
+				}
+			});
 	}
 }
 
