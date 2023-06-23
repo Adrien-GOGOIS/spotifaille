@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import { FavoriteTrack } from "../types/types";
+import { removeFavorite } from "../services/handleFavorites.service";
 
 interface Props {
 	favorite: FavoriteTrack;
@@ -7,8 +8,8 @@ interface Props {
 
 const FavoriteCard: FunctionComponent<Props> = ({favorite}: Props) => {
 
-	const removeFavorite = (favoriteId: string) => {
-
+	const remove = async (favoriteId: string) => {
+		removeFavorite(favoriteId);
 	}
 
 	return (
@@ -16,7 +17,7 @@ const FavoriteCard: FunctionComponent<Props> = ({favorite}: Props) => {
 			<p>{favorite.track.artists[0].name}</p>
 			<p>{favorite.track.album.name}</p>
 			<p>{favorite.track.name}</p>
-			<button onClick={() => removeFavorite(favorite.track.id)}>Remove</button>
+			<button onClick={() => remove(favorite.track.id)}>Remove</button>
 		</>
 	)
 }
