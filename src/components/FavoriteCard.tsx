@@ -13,12 +13,17 @@ const FavoriteCard: FunctionComponent<Props> = ({favorite}: Props) => {
 	}
 
 	return (
-		<>
-			<p>{favorite.track.artists[0].name}</p>
-			<p>{favorite.track.album.name}</p>
-			<p>{favorite.track.name}</p>
-			<button onClick={() => removeFavorite(favorite.track.id)}>Remove</button>
-		</>
+		<div className="w-1/2 max-w-sm rounded overflow-hidden shadow-lg">
+			<img className="w-full" src={favorite.track.album.images[0].url} alt="Sunset in the mountains"/>
+			<div className="px-6 py-4">
+				<div className="font-bold text-xl mb-2">{favorite.track.artists[0].name}</div>
+				<div className="font-bold text-lg mb-2">{favorite.track.album.name}</div>
+				<p className="text-gray-700 text-base">{favorite.track.name}</p>
+			</div>
+			<div className="px-6 pt-4 pb-2">
+				<button onClick={() => removeFavorite(favorite.track.id)} className="btn">Remove</button>
+			</div>
+		</div>
 	)
 }
 
