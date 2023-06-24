@@ -1,12 +1,11 @@
-
 import { FunctionComponent, useEffect, useState } from 'react';
 import Favorites from './Favorites';
 
 import { authentificationServiceInstance } from '../services/authentification.service';
 
 const Homepage: FunctionComponent  = () => {
-	const [isLoggedIn, setLoggedIn] = useState<boolean>(false);
-	const [accessToken, setAccessToken] = useState<string>('');
+	const [ isLoggedIn, setLoggedIn ] = useState<boolean>(false);
+	const [ accessToken, setAccessToken ] = useState<string>('');
 
 	const hashParams = authentificationServiceInstance.getHashParams();
 	const access_token = hashParams.access_token;
@@ -20,15 +19,15 @@ const Homepage: FunctionComponent  = () => {
 
 	return (
 		<div>
-		<div >
-			{!isLoggedIn &&
-			<button
-			onClick={() => window.open(authentificationServiceInstance.getAuthorizeHref(), '_self')}
-			>
-			Connectez-vous à Spotify
-			</button>}
-			{isLoggedIn && <Favorites accessToken={accessToken}/>}
-		</div>
+			{ !isLoggedIn &&
+				<button
+					onClick={() => window.open(authentificationServiceInstance.getAuthorizeHref(), '_self')}
+					className='btn border-2 p-2'
+				>
+					Connectez-vous à Spotify
+				</button> 
+			}
+			{ isLoggedIn && <Favorites/> }
 		</div>
 	);
 }

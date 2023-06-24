@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoritesContainer Component Rendering should display component 1`] = `
+<div>
+  <h1
+    className="text-xl text-center border-2 w-1/2 my-12 mx-auto"
+  >
+    Les 
+    1
+     favoris ont été chargés !
+  </h1>
+  <div
+    className="container text-center my-12 mx-auto"
+  >
+    <div
+      className="flex flex-wrap w-screen"
+    >
+      <FavoriteCard
+        favorite={
+          Object {
+            "added_at": "[[DATE]]",
+            "track": Object {
+              "album": Object {
+                "album_type": "[[ALBUM_TYPE]]",
+                "artists": Array [
+                  Object {
+                    "external_urls": Object {
+                      "spotify": "[[SPOTIFY]]",
+                    },
+                    "href": "[[HREF]]",
+                    "id": "[[ID]]",
+                    "name": "[[NAME]]",
+                    "type": "[[TYPE]]",
+                    "uri": "[[URI]]",
+                  },
+                ],
+                "available_markets": Array [
+                  "[[AVAILABLE_MARKET]]",
+                ],
+                "external_urls": Object {
+                  "spotify": "[[SPOTIFY]]",
+                },
+                "href": "[[HREF]]",
+                "id": "[[ID]]",
+                "images": Array [
+                  Object {
+                    "height": 2,
+                    "url": "[[URL]]",
+                    "width": 2,
+                  },
+                  Object {
+                    "height": 2,
+                    "url": "[[URL]]",
+                    "width": 2,
+                  },
+                  Object {
+                    "height": 2,
+                    "url": "[[URL]]",
+                    "width": 2,
+                  },
+                ],
+                "name": "[[NAME]]",
+                "release_date": "[[RELEASE_DATE]]",
+                "release_date_precision": "[[RELEASE_DATE_PRECISION]]",
+                "total_tracks": 2,
+                "type": "[[TYPE]]",
+                "uri": "[[URI]]",
+              },
+              "artists": Array [
+                Object {
+                  "external_urls": Object {
+                    "spotify": "[[SPOTIFY]]",
+                  },
+                  "href": "[[HREF]]",
+                  "id": "[[ID]]",
+                  "name": "[[NAME]]",
+                  "type": "[[TYPE]]",
+                  "uri": "[[URI]]",
+                },
+              ],
+              "available_markets": Array [
+                "[[AVAILABLE_MARKET]]",
+              ],
+              "disc_number": 2,
+              "duration_ms": 2,
+              "explicit": true,
+              "external_ids": Object {
+                "isrc": "[[ISRC]]",
+              },
+              "external_urls": Object {
+                "spotify": "[[SPOTIFY]]",
+              },
+              "href": "[[HREF]]",
+              "id": "[[ID]]",
+              "is_local": false,
+              "name": "[[]]",
+              "popularity": 2,
+              "preview_url": "[[PREVIEW_URL]]",
+              "track_number": 2,
+              "type": "[[TYPE]]",
+              "uri": "[[URI]]",
+            },
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
