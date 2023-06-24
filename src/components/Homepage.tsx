@@ -2,18 +2,15 @@ import { FunctionComponent, useEffect, useState } from 'react';
 import Favorites from './Favorites';
 
 import { authentificationServiceInstance } from '../services/authentification.service';
+import { favoriteServiceInstance } from '../services/favorite.service';
 
 const Homepage: FunctionComponent  = () => {
 	const [ isLoggedIn, setLoggedIn ] = useState<boolean>(false);
-	const [ accessToken, setAccessToken ] = useState<string>('');
-
-	const hashParams = authentificationServiceInstance.getHashParams();
-	const access_token = hashParams.access_token;
+	const access_token = favoriteServiceInstance.getAccessToken();
 
 	useEffect(() => {
 		if (access_token) {
-		setLoggedIn(true);
-		setAccessToken(access_token);
+			setLoggedIn(true);
 		}
 	}, []);
 

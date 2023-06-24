@@ -2,13 +2,15 @@ import { FavoriteTrack } from "../types/types";
 import { authentificationServiceInstance } from "./authentification.service";
 
 export class FavoriteService {
-	public hashParams = authentificationServiceInstance.getHashParams();
-	public accessToken = this.hashParams.access_token;
+	public getAccessToken = (): string => {
+		const hashParams = authentificationServiceInstance.getHashParams();
+		return hashParams.access_token;
+	}
 
 	public getFavorites = async (): Promise<FavoriteTrack[]> => {
 		const response = await fetch("https://api.spotify.com/v1/me/tracks?limit=5", {
 			headers: {
-				"Authorization": "Bearer  " + this.accessToken
+				"Authorization": "Bearer  " + this.getAccessToken()
 			}
 		});
 		const jsonData = await response.json();
@@ -20,7 +22,7 @@ export class FavoriteService {
 		await fetch(`https://api.spotify.com/v1/me/tracks?ids=${favoriteId}`, {
 			method: 'DELETE',
 			headers: {
-				"Authorization": "Bearer  " + this.accessToken
+				"Authorization": "Bearer  " + this.getAccessToken()
 			}
 		});
 	}
@@ -29,7 +31,7 @@ export class FavoriteService {
 		await fetch(`https://api.spotify.com/v1/me/tracks?ids=${favoriteId}`, {
 			method: 'PUT',
 			headers: {
-				"Authorization": "Bearer  " + this.accessToken
+				"Authorization": "Bearer  " + this.getAccessToken()
 			}
 		});
 	}
