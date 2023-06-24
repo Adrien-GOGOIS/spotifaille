@@ -12,6 +12,7 @@ export class FavoriteService {
 			}
 		});
 		const jsonData = await response.json();
+		
 		return jsonData.items as FavoriteTrack[]
 	}
 
