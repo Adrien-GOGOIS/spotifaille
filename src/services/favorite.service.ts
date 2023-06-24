@@ -6,7 +6,7 @@ export class FavoriteService {
 	public accessToken = this.hashParams.access_token;
 
 	public getFavorites = async (): Promise<FavoriteTrack[]> => {
-		const response = await fetch("https://api.spotify.com/v1/me/tracks", {
+		const response = await fetch("https://api.spotify.com/v1/me/tracks?limit=5", {
 			headers: {
 				"Authorization": "Bearer  " + this.accessToken
 			}
