@@ -1,4 +1,4 @@
-import Homepage from '../components/Homepage';
+import Homepage from '../Homepage';
 
 import { shallowRender } from './utils/shallowRenderer';
 

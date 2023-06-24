@@ -1,5 +1,5 @@
-import FavoritesContainer from '../components/FavoritesContainer';
-import { FavoriteTrack } from '../types/types';
+import FavoritesContainer from '../FavoritesContainer';
+import { FavoriteTrack } from '../../types/types';
 
 import { shallowRender } from './utils/shallowRenderer';
 

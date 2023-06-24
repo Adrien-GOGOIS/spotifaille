@@ -1,4 +1,4 @@
-import Loader from '../components/Loader';
+import Loader from '../Loader';
 
 import { shallowRender } from './utils/shallowRenderer';
 
