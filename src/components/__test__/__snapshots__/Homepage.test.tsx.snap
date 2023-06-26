@@ -1,16 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GroupFormComponent Rendering should display component 1`] = `
-<div>
-  <button
-    className="btn border-2 p-2"
-    onClick={[Function]}
-  >
-    Connectez-vous à Spotify
-  </button>
-</div>
-`;
-
 exports[`Homepage Component Rendering should display component 1`] = `
 <div>
   <button
