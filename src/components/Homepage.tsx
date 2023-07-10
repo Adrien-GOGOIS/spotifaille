@@ -1,8 +1,9 @@
 import { FunctionComponent, useEffect, useState } from 'react';
-import Favorites from './Favorites';
+import Favorites from './UserFavorites/Favorites';
 
 import { authentificationServiceInstance } from '../services/authentification.service';
 import { favoriteServiceInstance } from '../services/favorite.service';
+import Title from './Title';
 
 const Homepage: FunctionComponent  = () => {
 	const [ isLoggedIn, setLoggedIn ] = useState<boolean>(false);
@@ -16,6 +17,7 @@ const Homepage: FunctionComponent  = () => {
 
 	return (
 		<div>
+			<Title />
 			{ !isLoggedIn &&
 				<button
 					onClick={() => window.open(authentificationServiceInstance.getAuthorizeHref(), '_self')}

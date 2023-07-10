@@ -1,7 +1,7 @@
 import { SetStateAction } from 'react';
 import FavoriteActionButton from '../FavoriteActionButton';
 
-import { shallowRender } from './utils/shallowRenderer';
+import { shallowRender } from '../../__test__/utils/shallowRenderer';
 import { favoriteDataset } from './utils/dataset';
 
 describe('FavoriteActionButton Component', () => {

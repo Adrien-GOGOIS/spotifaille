@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
-import { FavoriteTrack } from "../types/types";
-import { favoriteServiceInstance } from "../services/favorite.service";
-import Loader from "./Loader";
+import { FavoriteTrack } from "../../types/types";
+import { favoriteServiceInstance } from "../../services/favorite.service";
+import Loader from "../Loader";
 import FavoritesContainer from "./FavoritesContainer";
 
 const Favorites: FunctionComponent = () => {

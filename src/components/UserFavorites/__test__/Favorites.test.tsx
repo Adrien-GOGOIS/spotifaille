@@ -1,6 +1,6 @@
 import Favorites from '../Favorites';
 
-import { shallowRender } from './utils/shallowRenderer';
+import { shallowRender } from '../__test__/utils/shallowRenderer';
 
 describe('Favorites Component', () => {
   describe('Rendering', () => {

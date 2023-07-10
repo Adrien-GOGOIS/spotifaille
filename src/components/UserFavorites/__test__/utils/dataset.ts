@@ -1,4 +1,4 @@
-import { FavoriteTrack } from "../../../types/types";
+import { FavoriteTrack } from "../../../../types/types";
 
 export const favoriteDataset: FavoriteTrack = {
 	added_at: "[[DATE]]",

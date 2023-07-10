@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import { favoriteServiceInstance } from "../services/favorite.service";
-import { FavoriteTrack } from "../types/types";
+import { favoriteServiceInstance } from "../../services/favorite.service";
+import { FavoriteTrack } from "../../types/types";
 
 interface Props {
 	isActive: boolean;

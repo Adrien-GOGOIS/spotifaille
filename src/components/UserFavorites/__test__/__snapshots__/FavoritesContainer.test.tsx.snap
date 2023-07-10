@@ -1,19 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FavoritesContainer Component Rendering should display component 1`] = `
-<div>
-  <h1
-    className="text-xl text-center border-2 w-1/2 my-12 mx-auto"
-  >
-    Les 
-    1
-     favoris ont été chargés !
-  </h1>
+<div
+  className="box-content w-100 flex flex-col text-center"
+>
   <div
     className="container text-center my-12 mx-auto"
   >
     <div
-      className="flex flex-wrap w-screen"
+      className="flex"
     >
       <FavoriteCard
         favorite={

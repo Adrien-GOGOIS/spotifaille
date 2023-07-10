@@ -5,7 +5,7 @@ exports[`FavoriteCard Component Rendering should display component 1`] = `
   className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 xl:w-1/5 rounded overflow-hidden shadow-lg h-auto relative"
 >
   <img
-    alt="Sunset in the mountains"
+    alt="album cover"
     className="w-full"
     src="[[URL]]"
   />

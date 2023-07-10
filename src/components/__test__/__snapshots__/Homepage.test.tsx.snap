@@ -2,6 +2,7 @@
 
 exports[`Homepage Component Rendering should display component 1`] = `
 <div>
+  <Title />
   <button
     className="btn border-2 p-2"
     onClick={[Function]}

@@ -1,12 +1,12 @@
 import { FunctionComponent, useState } from "react";
-import { FavoriteTrack } from "../types/types";
+import { FavoriteTrack } from "../../types/types";
 import FavoriteActionButton from "./FavoriteActionButton";
 
 interface Props {
 	favorite: FavoriteTrack;
 }
 
-const FavoriteCard: FunctionComponent<Props> = ({favorite}: Props) => {
+const FavoriteCard: FunctionComponent<Props> = ({ favorite }: Props) => {
 	const [ isActive, setIsActive ] = useState<boolean>(true);
 
 	return (

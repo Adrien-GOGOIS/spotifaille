@@ -1,5 +1,5 @@
 import FavoritesContainer from '../FavoritesContainer';
-import { FavoriteTrack } from '../../types/types';
+import { FavoriteTrack } from '../../../types/types';
 
 import { shallowRender } from './utils/shallowRenderer';
 import { favoriteDataset } from './utils/dataset';
