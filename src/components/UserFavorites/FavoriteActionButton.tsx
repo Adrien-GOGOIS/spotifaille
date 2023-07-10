@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { favoriteServiceInstance } from "../../services/favorite.service";
+import { favoriteServiceInstance } from "../../services/favorite/favorite.service";
 import { FavoriteTrack } from "../../types/types";
 
 interface Props {

@@ -1,8 +1,8 @@
 import { FunctionComponent, useEffect, useState } from 'react';
 import Favorites from './UserFavorites/Favorites';
 
-import { authentificationServiceInstance } from '../services/authentification.service';
-import { favoriteServiceInstance } from '../services/favorite.service';
+import { authentificationServiceInstance } from '../services/authentification/authentification.service';
+import { favoriteServiceInstance } from '../services/favorite/favorite.service';
 import Title from './Title';
 
 const Homepage: FunctionComponent  = () => {

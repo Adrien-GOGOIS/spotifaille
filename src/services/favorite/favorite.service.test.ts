@@ -1,5 +1,5 @@
 import { FavoriteTrack } from "../../types/types";
-import { favoriteServiceInstance } from "../favorite.service";
+import { favoriteServiceInstance } from "../favorite/favorite.service";
 import { favoriteDataset } from "./utils/dataset";
 
 const favoritesFromApi: {items: FavoriteTrack[]} = { items : [favoriteDataset] }

@@ -1,5 +1,5 @@
-import { FavoriteTrack } from "../types/types";
-import { authentificationServiceInstance } from "./authentification.service";
+import { FavoriteTrack } from "../../types/types";
+import { authentificationServiceInstance } from "../authentification/authentification.service";
 
 export class FavoriteService {
 	public getAccessToken = (): string => {
